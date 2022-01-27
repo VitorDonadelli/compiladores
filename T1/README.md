@@ -39,20 +39,23 @@ Para voltarmos até o diretório inicial utilizamos o comando:
 Com o projeto compilado e no diretório correto, podemos prosseguir com os testes.
 
 ### Testes:
-Para rodar os testes através dos comandos a seguir, devemos estar no diretório clonado. Portanto, verifique que está no diretório : 
+Para rodar os testes através dos comandos a seguir, devemos estar no diretório clonado. Portanto, verifique que está no diretório : ```/compiladores>```
 
-```/compiladores>```
+A maneira de executar testes individuais com o ```.jar``` gerado, utilizamos o seguinte comando: 
 
+> \> java -jar T1/la-lexico/target/la-lexico-1.0-SNAPSHOT-jar-with-dependencies.jar <arquivo_de_entrada> <arquivo_de_saida>
 
-Utilizaremos do corretor automático para a realização dos testes. Para isso iremos utilizar um padrão de comando que consiste em:
+Para finalidade avaliativa, utilizaremos do corretor automático proposto pelo Professor para a realização dos testes. Para isso iremos utilizar um padrão de comando que consiste em:
 
-> java -jar ARG1 ARG2 ARG3 ARG4 ARG5 ARG6 ARG7
+> java -jar ARG1 ARG2 ARG3 ARG4 ARG5 ARG6 ARG7  
+
+Sendo:  
 - ARG1 = Path do corretor
 - ARG2 = Path do executável do compilador ("entre aspas") 
 - ARG3 = Compilador GCC
 - ARG4 = Path para uma pasta de saida
-- ARG5 =  Path para a pasta onde estão os casos de teste
-- ARG6 = RAs dos membros do grupos ("entre aspas") 
+- ARG5 = Path para a pasta onde estão os casos de teste
+- ARG6 = RA dos membros do grupos ("entre aspas") 
 - ARG7 = Índice do trabalho (t1, t2, t3, t4, t5) 
 
 Transformamos a estrutura a cima com os nossos diretórios, levando em consideração que estamos no diretório clonado, desta forma iremos executar o seguinte comando: 
