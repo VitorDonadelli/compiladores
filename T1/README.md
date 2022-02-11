@@ -16,7 +16,7 @@
       <a href="#">
         <img style="border-radius: 25%" src="https://avatars.githubusercontent.com/u/40279487?v=4" width="75px;" alt="Vitor Donadelli Rodrigues"/><br>
         <sub>
-          <a href="https://github.com/VitorDonadelli"><b>Vitor Donadelli Rodrigues</b></a><br>
+          <a href="https://github.com/VitorDonadelli"><b>Vitor Donadelli</b></a><br>
            <b>RA: 760650</b>
         </sub>
       </a>
