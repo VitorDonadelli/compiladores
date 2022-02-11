@@ -1,8 +1,28 @@
 # Trabalho 2 - Analisador Sintático
 
 ###   Alunos:
-- [Reynold Navarro Mazo](https://github.com/reynold125) - 756188
-- [Vitor Donadelli Rodrigues](https://github.com/VitorDonadelli) - 760650
+<table>
+  <tr>
+    <td align="center">
+        <a href="#">
+            <img style="border-radius: 25%" src="https://avatars.githubusercontent.com/u/37456066?v=4" width="75px;" alt="Reynold Mazo"/><br>
+        <sub>
+           <a href="https://github.com/reynold125"><b>Reynold N. Mazo</b></a><br>
+           <b>RA: 756188</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img style="border-radius: 25%" src="https://avatars.githubusercontent.com/u/40279487?v=4" width="75px;" alt="Vitor Donadelli Rodrigues"/><br>
+        <sub>
+          <a href="https://github.com/VitorDonadelli"><b>Vitor Donadelli Rodrigues</b></a><br>
+           <b>RA: 760650</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ### Trabalho:
 Este trabalho consiste em implementar um analisador sintático para a linguagem LA (Linguagem Algorítmica) desenvolvida pelo prof. Jander, no âmbito do DC/UFSCar. O analisador sintático deve ler um programa-fonte e apontar onde existe erro sintático, indicando a linha e o lexema que causou a detecção do erro.
