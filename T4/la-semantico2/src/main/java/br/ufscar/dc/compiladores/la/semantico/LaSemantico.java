@@ -395,13 +395,16 @@ public class LaSemantico extends LaBaseVisitor<MyContext> {
         
         var tipoTemp = new Tipo(variavel.getTipo());
         
+        String fullName = ctxIdentificador.getNameFullName();
+        
         if (ponteiro != null) {
             tipoTemp.setEhPonteiro();
+            fullName = "^" + fullName;
         }
-                
+        
         // Verifica se os tipos são equivalentes
         if (!match(tipoTemp, ctxExpressao.getTipo())) {
-            LaSemanticoUtils.addErrAtribuicaoNaoCompativel(identificador.start, ctxIdentificador.getNameFullName());
+            LaSemanticoUtils.addErrAtribuicaoNaoCompativel(identificador.start, fullName);
         }
         
         return visitChildren(ctx);
@@ -645,7 +648,23 @@ public class LaSemantico extends LaBaseVisitor<MyContext> {
             } else {
                 var variavel = escopos.pegaVariavel(nomeIdent);
                 
-                return new MyContextParcelaUnario(variavel.getTipo());
+                var tipo = variavel.getTipo();
+                
+                if (tipo.getTipoBase() == TipoBase.REGISTRO) {
+                    var escopoRegistro = tipo.getEscopo();
+                    
+                    var nomeSulfixo = ctxIdentificador.getSulfixName();
+                    
+                    if (!escopoRegistro.acha(nomeSulfixo)) {
+                        LaSemanticoUtils.addErrIdentificadorNaoDeclarado(identificador.start, ctxIdentificador.getNameFullName());
+                    }
+                    
+                    var variavelSulfixo = escopoRegistro.pegaVariavel(nomeSulfixo);
+                    
+                    return new MyContextParcelaUnario(variavelSulfixo.getTipo());
+                } else {
+                    return new MyContextParcelaUnario(tipo);
+                }
             }
         } else if (ident != null) {
             // Função

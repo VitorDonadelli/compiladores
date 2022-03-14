@@ -42,6 +42,10 @@ public class Tipo {
         this.ehPonteiro = true;
     }
     
+    public TabelaDeSimbolos getEscopo() {
+        return this.escopo;
+    }
+    
     public void setEscopo(TabelaDeSimbolos escopo) {
         this.escopo = escopo;
     }

@@ -29,4 +29,21 @@ public class MyContextIdentificador extends MyContext {
         
         return name;
     }
+    
+    public String getSulfixName() {
+        String name = "";
+        
+        var flag = true;
+        
+        for (var i : this.otherIdents) {
+            if (flag) {
+                flag = false;
+                name += i;
+            } else {
+                name += "." + i;
+            }
+        }
+        
+        return name;
+    }
 }
