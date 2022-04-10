@@ -91,7 +91,7 @@ Como exemplo de uma instrução que segue a estrutura de entrada, temos:
 >  Encontre os arquivos com nome teste.txt ou bola.txt ou cavalo.txt, do usuário vitor, que pode ser lido e que tem tamanho menor que 1 Mb
 
 **Saida**:
-> find -type f \( -name "teste.txt" -o -name "bola.txt" -o -name "cavalo.txt" \) -user vitor -readable -size -1M 
+> find -type f \\( -name "teste.txt" -o -name "bola.txt" -o -name "cavalo.txt" \\) -user vitor -readable -size -1M
 
 ---
 ### Detalhes:
@@ -176,4 +176,4 @@ Onde o "programa.txt" pode ser substituído por:
 - "teste9.txt": Geração de código 
 ---> Encontre os arquivos com nome teste.txt ou bola.txt ou cavalo.txt, do usuário vitor, que pode ser lido e que tem tamanho menor que 1 Mb
 
-Ao finalizar a execução de cada um desses comandos, é esperado que o arquivo **saidas.txt** seja preenchido ou em caso de erro, com um debug do erro, ou em caso de sucesso com o comando **find** em sua versão final e utilizável.
+Ao finalizar a execução de cada um desses comandos, é esperado que o arquivo **saidas.txt** seja preenchido ou em caso de erro, com um debug do erro, ou em caso de sucesso com o comando **find** em sua versão final e utilizável. 
