@@ -1,0 +1,1 @@
+Encontre os programa com nome teste.txt com permissao

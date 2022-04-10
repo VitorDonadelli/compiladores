@@ -1,0 +1,1 @@
+Encontre em ./T6 os arquivos com nome teste8.txt que pode ser lido

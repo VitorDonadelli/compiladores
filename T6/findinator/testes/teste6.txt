@@ -1,0 +1,1 @@
+Encontre os arquivos com nome teste.txt ou bola.txt ou cavalo.txt e do usuário vitor e que pode ser lido e que tem tamanho menor que 1 Mb

@@ -1,0 +1,1 @@
+Encontre os arquivos com nome teste.txt e que permissão 777
