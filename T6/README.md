@@ -150,16 +150,16 @@ Para finalidade avaliativa, estarei disponibilizando alguns casos de testes para
 Onde o "programa.txt" pode ser substituído por:  
 
 - "teste1.txt": Erro Léxico (comando 'Acha' não existe)
----> Acha em ./pasta o arquivo com nome teste.txt
+---> Acha em ./pasta os arquivos com nome teste.txt
 
 - "teste2.txt": Erro Léxico (ArquivoDiretorio 'programa' não existe)
 ---> Encontre os programa com nome teste.txt
 
 - "teste3.txt": Erro Sintático (faltando o "nome")
----> Encontre os programa com nome 
+---> Encontre os arquivos com nome 
 
 - "teste4.txt": Erro Sintático (faltando a permissão)
----> Encontre os programa com nome teste.txt com permissao
+---> Encontre os arquivos com nome teste.txt e com permissao
 
 - "teste5.txt": Erro Semântico (Separador ',' invalido ao posicionamento, esperado: 'e')
 ---> Encontre os arquivos com nome teste.txt ou cavalo.txt, do usuário vitor
@@ -171,7 +171,7 @@ Onde o "programa.txt" pode ser substituído por:
 ---> Encontre os arquivos com nome teste.txt e que permissão 777
 
 - "teste8.txt": Geração de código 
----> Encontre em ./T6 os arquivos com nome teste8.txt que pode ser lido
+---> Encontre em ./T6 os arquivos com nome teste8.txt e que pode ser lido
 
 - "teste9.txt": Geração de código 
 ---> Encontre os arquivos com nome teste.txt ou bola.txt ou cavalo.txt, do usuário vitor, que pode ser lido e que tem tamanho menor que 1 Mb
