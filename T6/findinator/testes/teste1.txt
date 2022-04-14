@@ -1,1 +1,1 @@
-Acha em ./pasta o arquivo com nome teste.txt
+Acha em ./pasta os arquivos com nome teste.txt
