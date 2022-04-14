@@ -19,24 +19,21 @@ public class Find extends MyContext {
     public String build() {
         String cmd = "find";
         
-        //
-        
+        // Caso tenha a pasta
         if (!opLugar.isEmpty()) {
             cmd += opLugar.get().build();
         }
         
-        //
-        
+        // Adiciona no comando a parte de arquivo e diretorio
         cmd += arquivoDiretorio.build();
         
-        //
-        
+        // Adiciona no comando final um comando 
         switch (comando) {
             case MISSING:
                 // Erro
                 break;
             case ENCONTRE:
-                // Nada
+                // Somente o "find"
                 break;
             case DEBUG:
                 cmd += " -print";
@@ -49,8 +46,7 @@ public class Find extends MyContext {
                 break;
         }
         
-        //
-        
+        // Adiciona no comando a parte de teste
         cmd += testes.build();
         
         return cmd;

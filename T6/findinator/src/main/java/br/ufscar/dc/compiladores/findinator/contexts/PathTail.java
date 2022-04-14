@@ -28,6 +28,7 @@ public class PathTail extends MyContext {
             Optional<ModificadorNomePath> opModificadorNomePath = opModificadoresNomePath.get(i);
             Path path = paths.get(i);
 
+            // Atribui a flag e o valor
             if (!path.isMissing()) {
                 cmd = "-path";
                 target = path.getValue();
@@ -35,6 +36,7 @@ public class PathTail extends MyContext {
                 throw new RuntimeException("Parâmetros inválidos para 'NomePath'");
             }
 
+            // Monta o comando de acordo com o modificador usado
             if (opModificadorNomePath.isEmpty()) {
                 r += " -o " + String.format("%s \"%s\"", cmd, target);
             } else {

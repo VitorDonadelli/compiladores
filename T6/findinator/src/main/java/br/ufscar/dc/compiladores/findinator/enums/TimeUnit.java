@@ -2,6 +2,7 @@ package br.ufscar.dc.compiladores.findinator.enums;
 
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+// Mapeia texto para Enum
 public enum TimeUnit {
     MISSING,
     MINUTO,

@@ -24,6 +24,7 @@ public class NomePath extends MyTesteContext {
         this.pathTail = pathTail;
     }
     
+    // Monta o argumento e busca por nome ou path
     @Override
     public String build() {
 
@@ -32,6 +33,7 @@ public class NomePath extends MyTesteContext {
         String cmd = "";
         String target = "";
 
+        // Atribui a flag e o valor, dependendo do campo usado
         if (!identificador.isMissing()) {
             cmd = " -name";
             target = identificador.getValue();
@@ -45,6 +47,7 @@ public class NomePath extends MyTesteContext {
             throw new RuntimeException("Parâmetros inválidos para 'NomePath'");
         }
 
+        // Monta o comando de acordo com o modificador usado
         if (opModificadorNomePath.isEmpty()) {
             r += " \\(" + String.format("%s \"%s\"", cmd, target);
         } else {
@@ -56,6 +59,7 @@ public class NomePath extends MyTesteContext {
             }
         }
         
+        // Concatena o resto do comando
         if (nomeTail != null) {
             r += nomeTail.build() + " \\)";
         } else if (pathTail != null) {

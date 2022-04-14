@@ -3,6 +3,7 @@ package br.ufscar.dc.compiladores.findinator.enums;
 import java.util.Optional;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+// Mapeia texto para Enum
 public enum ModificadorNomePath {
     QUE_COMECA_COM,
     QUE_TERMINA_COM;

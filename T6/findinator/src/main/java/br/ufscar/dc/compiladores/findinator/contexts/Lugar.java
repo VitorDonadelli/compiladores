@@ -10,6 +10,7 @@ public class Lugar extends MyContext {
         this.paths = paths;
     }
     
+    // Retorna a path da pesquisa (se houver)
     public String build() {
         String s = "";
         

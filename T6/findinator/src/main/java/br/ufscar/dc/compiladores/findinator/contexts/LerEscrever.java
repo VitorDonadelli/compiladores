@@ -9,6 +9,7 @@ public class LerEscrever extends MyTesteContext {
         this.lerOuEscrever = lerOuEscrever;
     }
     
+    // Constroi a parte de argumento referente a propriedade do arquivo/diretorio
     @Override
     public String build() {
         switch (lerOuEscrever) {

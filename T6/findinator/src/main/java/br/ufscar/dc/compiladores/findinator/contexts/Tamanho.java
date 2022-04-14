@@ -16,10 +16,12 @@ public class Tamanho extends MyTesteContext {
         this.sizeUnit = sizeUnit;
     }
     
+    // Monta flag do tamanho
     @Override
     public String build() {
         String s = " -size ";
         
+        // Sinal
         if (!opModificadorTamanho.isEmpty()) {
             switch (opModificadorTamanho.get()) {
                 case MAIOR_QUE:
@@ -34,8 +36,10 @@ public class Tamanho extends MyTesteContext {
             }
         }
         
+        // Numero
         s += numero.getValue();
         
+        // Unidade
         switch (sizeUnit) {
             case B:
                 s += "c";

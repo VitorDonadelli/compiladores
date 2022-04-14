@@ -12,16 +12,13 @@ public class Findinator {
     public static PrintWriter pw;
     
     public static void main(String[] args) throws IOException {
-        // String text = String.join(" ", args);
-        // String text = "Encontre em ./pasta e /pasta os arquivos com nome teste.txt ou bola.txt ou cavalo.txt, do usuário vitor, que pode ser lido e que tem tamanho menor que 1 Mb";
         
+        // Cria printWriter pro arquivo de saida
         pw = new PrintWriter(args[1]);
         CharStream cs = CharStreams.fromFileName(args[0]);
         
-        var f = new Findinator();
-        
-        // f.printTokens(text);
-        //System.out.println(f.run(cs, pw));
+        // Instancia e roda o compilador
+        var f = new Findinator(); 
         String retorno = f.run(cs, pw); 
         if (retorno != null ) {
             pw.write(retorno + '\n');
@@ -32,6 +29,7 @@ public class Findinator {
     
     public String run(CharStream input, PrintWriter pw) {
         
+        // Construção do lexer, parser e arvore semantica
         FindinatorLexer   lexer  = new FindinatorLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         FindinatorParser  parser = new FindinatorParser(tokens);
@@ -40,20 +38,22 @@ public class Findinator {
         var find   = arvore.visitFind(parser.find());
         var erros  = arvore.getErros();
         
+        // Imprime os erros da stack
         for (var e : erros) {
-            //System.out.println(e.getMsg());
             pw.write(e.getMsg() + '\n');
         }
         
+        // Caso de erro
         if (find == null) {
-            //System.out.println("Não foi possível processar o texto!");
             pw.write("Não foi possível processar o texto!\n");
             return null;
         }
         
+        // Roda o gerador de código
         return find.build();
     }
     
+    // Debug (não ta chamando :D)
     public void printTokens(String input) {
         FindinatorLexer lexer = new FindinatorLexer(CharStreams.fromString(input));
                 

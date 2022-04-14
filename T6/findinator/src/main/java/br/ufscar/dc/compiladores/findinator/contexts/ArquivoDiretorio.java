@@ -12,6 +12,7 @@ public class ArquivoDiretorio extends MyContext {
         this.opTipoExtra = opTipoExtra;
     }
     
+    // Constroi a parte de argumento referente ao alvo de busca (arquivo/diretorio)
     public String build() {
         String s = " -type ";
         
@@ -20,7 +21,7 @@ public class ArquivoDiretorio extends MyContext {
                 s += "f";
                 break;
             case DIRETORIOS:
-                s += "s";
+                s += "d";
                 break;
         }
         

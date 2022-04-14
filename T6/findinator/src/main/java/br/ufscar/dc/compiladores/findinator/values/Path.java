@@ -2,6 +2,7 @@ package br.ufscar.dc.compiladores.findinator.values;
 
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+// Wrapper para valor arbitrario de Path
 public class Path {
     private final String value;
     private boolean missing;

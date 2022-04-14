@@ -9,6 +9,7 @@ public class Caracteristica extends MyTesteContext {
         this.caracteristica = caracteristica;
     }
     
+    // Constroi a parte de argumento referente a propriedade do arquivo/diretorio
     @Override
     public String build() {
         switch (caracteristica) {

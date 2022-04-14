@@ -12,6 +12,7 @@ public class Permissao extends MyTesteContext {
         this.numero = numero;
     }
     
+    // Monta flag da permissão
     @Override
     public String build() {
         return " -perm /" + numero.getValue();

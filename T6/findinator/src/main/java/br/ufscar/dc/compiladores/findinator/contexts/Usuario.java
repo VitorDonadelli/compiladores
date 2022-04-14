@@ -9,12 +9,13 @@ public class Usuario extends MyTesteContext {
         this.identificador = identificador;
     }
     
+    // Constroi a flag de usuario
     @Override
     public String build() {
         if (identificador == null) {
             System.out.println("null");
         }
-        
+          
         return " -user " + identificador.getValue();
     }
 }

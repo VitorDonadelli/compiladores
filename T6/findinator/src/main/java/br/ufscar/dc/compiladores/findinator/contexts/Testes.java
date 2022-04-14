@@ -9,6 +9,7 @@ public class Testes extends MyContext {
         this.testes = testes;
     }
     
+    // Concatena os testes
     public String build() {
         String s = "";
         

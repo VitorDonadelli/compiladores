@@ -19,12 +19,14 @@ public class Verbo extends MyTesteContext {
         this.timeUnit = timeUnit;
     }
     
+    // Monta as flags relacionadas ao verbo
     @Override
     public String build() {
         int value = numero.getValue();
         
         String mod = "";
         
+        // Sinal
         if (!opModificadorVerbo.isEmpty()) {
             switch (opModificadorVerbo.get()) {
                 case MAIS_DE:
@@ -39,6 +41,7 @@ public class Verbo extends MyTesteContext {
             }
         }
         
+        // Constroi a flag de acordo com o modificador de tempo
         switch (verbo) {
             case ACESSADO:
                 switch (timeUnit) {

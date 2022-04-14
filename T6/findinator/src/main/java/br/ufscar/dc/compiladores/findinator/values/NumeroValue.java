@@ -2,6 +2,7 @@ package br.ufscar.dc.compiladores.findinator.values;
 
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+// Wrapper para valor arbitrario de Numero
 public class NumeroValue {
     private Integer value;
     private boolean missing;

@@ -30,6 +30,7 @@ public class NomeTail extends MyContext {
             Identificador identificador = identificadores.get(i);
             File file = files.get(i);
 
+            // Atribui a flag e o valor, dependendo do campo usado
             if (!identificador.isMissing()) {
                 cmd = "-name";
                 target = identificador.getValue();
@@ -40,6 +41,7 @@ public class NomeTail extends MyContext {
                 throw new RuntimeException("Parâmetros inválidos para 'NomePath'");
             }
 
+            // Monta o comando de acordo com o modificador usado
             if (opModificadorNomePath.isEmpty()) {
                 r += " -o " + String.format("%s \"%s\"", cmd, target);
             } else {
