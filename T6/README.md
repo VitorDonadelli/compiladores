@@ -1,3 +1,4 @@
+
 # Trabalho 6 - Findinator
 
 ###   Alunos:
@@ -28,7 +29,7 @@
 ### Trabalho:
 Este trabalho consiste em implementar um compilador que tem como finalidade converter frases em linguagem natural, seguindo algumas regras, para comandos que sigam a estrutura presente no comando **FIND**.
 
-**Video de Apresentação**: URL
+**Video de Apresentação**: [VIDEO](https://youtu.be/12ZDPq5io5Q)
 
 As especificações de regras e requisitos que o trabalho deve seguir estão no pdf : **T6 - especificação e critérios.pdf**
 
@@ -66,7 +67,7 @@ A estrutura do comando que deve ser passado deve conter o seguinte formato:
             )
         )
       | (
-            CONECTOR permição NUM
+            CONECTOR permissao NUM
         )
       | (
             CONECTOR pode ser ( lido | escrito )
